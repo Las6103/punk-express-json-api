@@ -1,0 +1,23 @@
+{
+  "name": "punk-express-json-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Las6103/punk-express-json-api.git"
+  },
+  "author": "leonardo silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Las6103/punk-express-json-api/issues"
+  },
+  "homepage": "https://github.com/Las6103/punk-express-json-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.17"
+  }
+}
