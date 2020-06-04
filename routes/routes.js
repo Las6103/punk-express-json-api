@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   Beers.find({}).then((beers) => res.json(beers));
 });
 
-router.get("/beers/:name", (req, res) => {
+router.get("/:name", (req, res) => {
   Beers.find({ name: req.params.name }).then((beer) => res.json(beer));
 });
 
