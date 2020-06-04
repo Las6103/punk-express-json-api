@@ -8,9 +8,16 @@ if (process.env.NODE_ENV === "production") {
   mongoURI = "mongodb://localhost/punk-api-beers";
 }
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  mongoURI,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+    .then((instance) =>
+      console.log(`Connected to db: ${instance.connections[0].name}`)
+    )
+    .catch((error) => console.log("Connection failed!", error))
+);
 
 module.exports = mongoose;
