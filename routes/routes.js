@@ -5,7 +5,7 @@ const Beers = require("../models/beers.js");
 /**
  * GET Routes
  */
-router.get("/beers", (req, res) => {
+router.get("/", (req, res) => {
   Beers.find({}).then((beers) => res.json(beers));
 });
 
@@ -13,7 +13,7 @@ router.get("/beers/:name", (req, res) => {
   Beers.find({ name: req.params.name }).then((beer) => res.json(beer));
 });
 
-router.get("/beers/id/:id", (req, res) => {
+router.get("/id/:id", (req, res) => {
   let id = req.params.id;
   Beers.findById(id).then((beer) => res.json(beer));
 });
@@ -22,7 +22,7 @@ router.get("/beers/id/:id", (req, res) => {
 /**
  * POST Route
  */
-router.post("/beers", (req, res) => {
+router.post("/", (req, res) => {
   Beers.create(req.body).then((beer) => res.json(beer));
 });
 
@@ -30,13 +30,13 @@ router.post("/beers", (req, res) => {
 /**
  * PUT Routes
  */
-router.put("/beers/:name", (req, res) => {
+router.put("/:name", (req, res) => {
   Beers.findOneAndUpdate({ name: req.params.name }, req.body, {
     new: true,
   }).then((beer) => res.json(beer));
 });
 
-router.put("/beers/id/:id", (req, res) => {
+router.put("/id/:id", (req, res) => {
   Beers.findByIdAndUpdate({ _id: req.params.id }, req.body, {
     new: true,
   }).then((beer) => res.json(beer));
@@ -45,13 +45,13 @@ router.put("/beers/id/:id", (req, res) => {
 /**
  * DELETE Routes
  */
-router.delete("/beers/:name", (req, res) => {
+router.delete("/:name", (req, res) => {
   Beers.findOneAndRemove({ name: req.params.name }).then((beer) =>
     res.json(beer)
   );
 });
 
-router.delete("/beers/id/:id", (req, res) => {
+router.delete("/id/:id", (req, res) => {
   Beers.findByIdAndRemove({ _id: req.params.id }).then((beer) =>
     res.json(beer)
   );

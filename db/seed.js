@@ -1,4 +1,4 @@
-const beersData = require("../db/beersdata.json");
+const beersData = require("./beersdata.json");
 const beerModel = require("../models/beers.js");
 
 /**

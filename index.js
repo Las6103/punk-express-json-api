@@ -6,7 +6,7 @@ app.get('/', function(req, res){
 });
 
 app.use(express.json());
-app.use("/", require("./routes/routes.js"));
+app.use("/beers", require("./routes/routes.js"));
 
 app.set("port", process.env.PORT || 8080);
 
