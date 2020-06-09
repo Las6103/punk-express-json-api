@@ -1,6 +1,10 @@
-# punk-express-json-api
+# Punk-Express-Json-Api
 
-## Install
+## Getting Started
+This API is deployed live on Heroku! Check it out with the following URL!
+```https://punk-api-beers.herokuapp.com/beers```
+
+## Install Dependencies
 ``` 
 npm install express mongoose
 ```
@@ -13,16 +17,19 @@ npm install express mongoose
 
 ## Get list of Beers
 ```GET /beers```
-Example ```http://localhost:3000/beers/```
+Ex on localhost ```http://localhost:3000/beers/```
+Ex on deployed site ```https://punk-api-beers.herokuapp.com/beers/```
 
 ## Filter by name
 ```GET /beers/:name```
-Example ```http://localhost:3000/beers/Buzz```
+Ex on localhost ```http://localhost:3000/beers/Buzz```
+Ex on deployed site ```https://punk-api-beers.herokuapp.com/beers/Buzz```
 Please note that the search in case sensitive
 
 ## Filter by ID
 ```GET /beers/id/:id```
-Example ```http://localhost:3000/beers/id/5ed6f141fa8b193fb49b58e3```
+Ex on localhost ```http://localhost:3000/beers/id/5ed6f141fa8b193fb49b58e3```
+Ex on deployed site ```https://punk-api-beers.herokuapp.com/beers/id/5ed8553e4d82610004b17492```
 
 ## Creator
 ```Leonardo Silva```
